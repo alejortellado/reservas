@@ -1,0 +1,62 @@
+
+
+<div style="margin: 25px 15px;">
+  <h2>Crear Habitación</h2>
+
+  <form (ngSubmit)="crearHabitacion()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="habitacionnro">Nro Habitación</label>
+          <input id="habitacionnro" name="habitacionnro" type="number" class="form-control"
+                 [(ngModel)]="habitacion.habitacionnro">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="habitacionpiso">Nro Piso</label>
+          <input id="habitacionpiso" name="habitacionpiso" type="number" class="form-control"
+                 [(ngModel)]="habitacion.habitacionpiso">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="cantcamas">Cantidad Camas</label>
+          <input id="cantcamas" name="cantcamas" type="number" class="form-control"
+                 [(ngModel)]="habitacion.cantcamas">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="tienefrigobar">Frigobar</label>
+          <select name="tienefrigobar" id="tienefrigobar" class="form-control"
+                  [(ngModel)]="habitacion.tienefrigobar">
+            <option [ngValue]="true">Sí</option>
+            <option [ngValue]="false">No</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="tienetelevision">Televisión</label>
+          <select name="tienetelevision" id="tienetelevision" class="form-control"
+                  [(ngModel)]="habitacion.tienetelevision">
+            <option [ngValue]="true">Sí</option>
+            <option [ngValue]="false">No</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div style="text-align: end;">
+        <button class="btn btn-success" type="submit">Crear</button>
+        <button class="btn btn-danger" type="button" style="margin-left: 5px;" (click)="cancelar()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>

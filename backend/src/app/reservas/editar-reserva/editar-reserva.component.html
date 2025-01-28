@@ -1,0 +1,51 @@
+
+
+<div style="margin: 25px 15px;">
+  <h2>Editar Reserva</h2>
+
+  <form (ngSubmit)="editarReserva()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="habitacionid">Habitación</label>
+          <select name="habitacionid" id="habitacionid" class="form-control"
+                  [(ngModel)]="reserva.habitacionid">
+            <option *ngFor="let dato of habitaciones" [ngValue]="dato.id">{{dato.habitacionnro}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="personaid">Persona</label>
+          <select name="personaid" id="personaid" class="form-control"
+                  [(ngModel)]="reserva.personaid">
+            <option *ngFor="let dato of personas" [ngValue]="dato.id">{{dato.nombrecompleto}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="fechaentrada">Fecha Entrada</label>
+          <input id="fechaentrada" name="fechaentrada" type="date" class="form-control"
+                 [(ngModel)]="reserva.fechaentrada">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="fechasalida">Fecha Salida</label>
+          <input id="fechasalida" name="fechasalida" type="date" class="form-control"
+                 [(ngModel)]="reserva.fechasalida">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div style="text-align: end;">
+        <button class="btn btn-success" type="submit">Editar</button>
+        <button class="btn btn-danger" type="button" style="margin-left: 5px;" (click)="cancelar()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+.opciones{
+  border: 1px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.opciones:hover{
+  background-color: #e3e3e3;
+}
